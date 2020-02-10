@@ -1,0 +1,33 @@
+.simple-advantages {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	list-style: none;
+
+	&__item {
+		position: relative;
+		margin-bottom: 8px;
+		padding: 11px 35px;
+		font-weight: 300;
+		font-size: 12px;
+		line-height: 14px;
+		color: $dark;
+		border: 1px solid $rating-default;
+		border-radius: 6px;
+
+		&:before,
+		&:after {
+			content: "";
+			position: absolute;
+			top: 15px;
+			left: 14px;
+			width: 9px;
+			height: 5px;
+			border-left: 2px solid $green;
+			border-bottom: 2px solid $green;
+			transform: rotate(-45deg);
+		}
+	}
+}

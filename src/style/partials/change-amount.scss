@@ -1,0 +1,48 @@
+.change-amount {
+	display: flex;
+	justify-content: space-between;
+	width: 104px;
+	background-color: $main-bg;
+	box-sizing: border-box;
+
+	&__regulator {
+		position: relative;
+		padding: 0 16px;
+		font-size: 0;
+		cursor: pointer;
+		border: none;
+		background-color: transparent;
+
+		&:before,
+		&:after {
+			content: "";
+			position: absolute;
+			background-color: $title-gray;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		&:before {
+			height: 2px;
+			width: 12px;
+		}
+
+		&--plus:after {
+			height: 12px;
+			width: 2px;
+		}
+	}
+
+	&__text {
+		padding-top: 17px;
+		padding-bottom: 15px;
+		width: 32px;
+		font-size: 14px;
+		font-weight: 500;
+		text-align: center;
+		color: $title-gray;
+		border: none;
+		background-color: $main-bg;
+	}
+}

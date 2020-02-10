@@ -1,0 +1,87 @@
+.empty-page {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: auto;
+	margin: 30px auto;
+	padding: 0;
+	text-align: center;
+
+	&__icon {
+		position: relative;
+		display: block;
+		width: 100%;
+		height: auto;
+		margin: 0 auto 50px;
+		padding: 0;
+
+		img {
+			position: relative;
+			display: block;
+			width: 100%;
+			max-width: 247px;
+			height: auto;
+			margin: 0 auto;
+			padding: 0;
+		}
+	}
+
+	&__caption {
+		position: relative;
+		display: block;
+		width: 100%;
+		height: auto;
+		margin: 0 auto 30px;
+		padding: 0;
+
+		p {
+			font-size: 16px;
+			line-height: 21px;
+			font-weight: 300;
+		}
+	}
+
+	&__buttons {
+		position: relative;
+		display: block;
+		width: 100%;
+		max-width: 550px;
+		height: auto;
+		margin: 0 auto;
+		padding: 0;
+		list-style-type: none;
+
+		.list__item {
+			position: relative;
+			display: inline-block;
+			vertical-align: middle;
+			width: 100%;
+			max-width: 218px;
+			height: auto;
+			margin: 0 5px;
+			padding: 0 0 20px;
+
+			.btn {
+				position: relative;
+				display: block;
+				width: 100%;
+				height: auto;
+				margin: 0;
+				padding: 15px 0;
+				font-size: 14px;
+				line-height: 19px;
+				font-weight: 500;
+				color: #333;
+				text-transform: uppercase;
+				letter-spacing: 0.03em;
+				border: 1px solid #333;
+
+				&:hover {
+					background: #D33234;
+					border: 1px solid #D33234;
+					color: #fff;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,9 @@
+.buyers-like {
+	font-size: 14px;
+	line-height: 17px;
+	color: $amount-special;
+
+	&__mark {
+		color: $buyers-like-marks;
+	}
+}

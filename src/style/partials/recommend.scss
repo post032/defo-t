@@ -1,0 +1,16 @@
+.recommend {
+	position: relative;
+	padding-left: 16px;
+	font-size: 12px;
+	line-height: 14px;
+	color: $header-top-menu;
+	margin-right: 0;
+
+	&:before {
+		content: url("../img/icons/small-people.svg");
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+	}
+}

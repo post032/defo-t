@@ -1,0 +1,719 @@
+//=======COLORS========
+$header-dark: #333333;
+$header-text-gray: #bdbdbd;
+$header-icons: #4f4f4f;
+$header-search-bg: #e9e9e9;
+$button-dark: #333333;
+$border-dark: #333333;
+//old colors
+$red: #d33234;
+$white: #ffffff;
+$white-bg: #ffffff;
+$opacity-white: rgba(255, 255, 255, 0.8);
+$opacity-white-more: rgba(255, 255, 255, 0.85);
+$black: #000000;
+$black-custom: #333333;
+$dark: #292e3c;
+$main-bg: #f6f6f6;
+$line-gray: #c7c8c8;
+$title-gray: #545863;
+$title-gray-light: #6d707a;
+$header-top-menu: #b5b6b9;
+$header-top-menu-hover: #e5e5e6;
+$header-search-dark-gray: #c7c8cb;
+$opacity-gray: rgba(41, 46, 60, 0.88);
+$news-date: rgba(41, 46, 60, 0.48);
+$states-text: #999ba2;
+$rating-default: #e9e9e9;
+$rating-voted: #f6bc00;
+$green-border: #6fa559;
+$old-price: #bdbdbd;
+$like-border: #bdbdbd;
+$like-smile: #bdbdbd;
+$product-shadow: rgba(41, 46, 60, 0.16);
+$input-background: #f3f3f3;
+$call-form: #828282;
+$footer-contacts: rgba(41, 46, 60, 0.64);
+$services-shadow: rgba(0, 0, 0, 0.15);
+$buyers-like-marks: #2d9cdb;
+$action-basket-buttons: #4f4f4f;
+$product-border: #f3f3f3;
+$comment-border: #f3f3f3;
+$amount-much: #27ae60;
+$amount-few: #f2994a;
+$amount-special: #828282;
+$list-mark-gray: #e0e0e0;
+$time: #828282;
+$scroll: #828282;
+$scrollbar: #e9e9e9;
+$text-gray: #bdbdbd;
+$arrow-down: #c4c4c4; //metro
+$blue: #2f80ed;
+$green: #27ae60;
+//===========DEFAULT STYLES========
+// Main
+* {
+	box-sizing: border-box;
+
+	&:after,
+	&:before {
+		box-sizing: border-box;
+	}
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type = "checkbox"].visually-hidden,
+input[type = "radio"].visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.display-none {
+	display: none;
+}
+
+body,
+html {
+	margin: 0;
+	width: 100%;
+}
+
+body {
+	font-family: "Roboto", "Arial", sans-serif;
+	position: relative;
+	line-height: 1.2;
+	font-size: 18px;
+	font-weight: 400;
+	background-color: $main-bg;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+	transition: all 0.2s;
+
+	&:focus,
+	&:hover {
+		text-decoration: none;
+		outline: none;
+	}
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	margin: 0;
+}
+
+button,
+input,
+textarea {
+	outline: none;
+	-webkit-appearance: none;
+	resize: none;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+button {
+	font-family: inherit;
+	cursor: pointer;
+}
+
+main {
+	position: relative;
+}
+
+.container {
+	position: relative;
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 0 8px;
+}
+
+.wrapper {
+	padding: 0;
+}
+
+.main-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin-top: 17px;
+}
+
+.main-content {
+	width: 100%;
+
+	&.wide {
+		width: 100%;
+	}
+
+	&.flex {
+		display: flex;
+	}
+}
+// анимация для фиксированного меню в мобилке
+@keyframes slide-in {
+	0% {
+		transform: translateY(-81px);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+}
+// анимация для ховера новостей
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+// заголовки блоков
+.block-title {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 24px;
+	margin-top: 24px;
+
+	&.hidden {
+		display: none;
+	}
+
+	h2 {
+		font-size: 18px;
+		line-height: 22px;
+		font-weight: 400;
+		color: $header-dark;
+	}
+
+	a {
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 16px;
+		color: $header-dark;
+		border: 1px solid $header-search-bg;
+		margin-left: 24px;
+		padding: 6px 0;
+		display: inline-block;
+		text-align: center;
+		width: 142px;
+	}
+	// поиск для карты
+	.map__search {
+		flex-basis: 100%;
+		margin-top: 28px;
+
+		.map__search-block {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.map__search-input {
+			width: 100%;
+			height: 48px;
+			background-color: $white;
+			padding: 0 22px;
+			font-size: 10px;
+			font-weight: 500;
+			line-height: 24px;
+			color: $call-form;
+			border: none;
+
+			&::-webkit-input-placeholder {
+				text-transform: uppercase;
+				font-weight: 500;
+			}
+
+			&::-moz-placeholder {
+				text-transform: uppercase;
+				font-weight: 500;
+			}
+			/* Firefox 19+ */
+			&:-moz-placeholder {
+				text-transform: uppercase;
+				font-weight: 500;
+			}
+			/* Firefox 18- */
+			&:-ms-input-placeholder {
+				text-transform: uppercase;
+				font-weight: 500;
+			}
+		}
+
+		.map__search-submit {
+			width: 48px;
+			height: 48px;
+			padding: 15px;
+			background-color: $red;
+			border: none;
+
+			use {
+				stroke: $white;
+			}
+		}
+	}
+	// кнопки
+	.map-btns {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		margin-bottom: 8px;
+
+		.map-btn {
+			flex-basis: 48%;
+			margin: 0;
+			color: rgba(41, 46, 60, 0.88);
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 16px;
+			padding: 12px 0;
+			text-transform: uppercase;
+			border: 1px solid $dark;
+			border-radius: 1px;
+
+			&.active {
+				color: $white;
+				border: 1px solid $header-dark;
+				background-color: $header-dark;
+			}
+		}
+	}
+}
+
+.page-title {
+	font-size: 18px;
+	line-height: 22px;
+	font-weight: 400;
+	color: $header-dark;
+}
+
+@media (min-width: 768px) {
+	.block-title {
+		h2 {
+			font-size: 24px;
+			line-height: 28px;
+		}
+	}
+}
+@media (min-width: 768px) {
+	.page-title {
+		font-size: 24px;
+		line-height: 28px;
+	}
+}
+@media (min-width: 1280px) {
+	.page-title {
+		font-size: 24px;
+		line-height: 29px;
+	}
+}
+//стрелочки для слика
+.slick__button {
+	position: absolute;
+	top: 50%;
+	width: 40px;
+	height: 40px;
+	padding: 0;
+	background-color: $main-bg;
+	border: 1px solid $header-search-bg;
+	box-sizing: border-box;
+	z-index: 3;
+	transform: translateY(-50%);
+	transition: all 0.2s;
+
+	&:before {
+		content: url("../img/icons/slick-arrow.svg");
+		display: block;
+		margin: auto;
+		height: 14px;
+	}
+
+	&--prev {
+		left: -15px;
+	}
+
+	&--next {
+		right: -15px;
+
+		&:before {
+			transform: scale(-1);
+		}
+	}
+
+	&--simple {
+		height: 20px;
+		width: 10px;
+		background-color: transparent;
+		border: none;
+
+		&:before {
+			content: url("../img/icons/slick-arrow-simple.svg");
+		}
+	}
+}
+//слой для меню или всплывашек
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: $black-custom;
+	opacity: 0.5;
+	z-index: 9;
+	display: none;
+
+	&.visible {
+		display: block;
+		opacity: 0.75;
+	}
+
+	&.active {
+		display: block;
+	}
+}
+//иконки корзины
+.buy-icon__stroke {
+	stroke: $action-basket-buttons;
+	fill: none;
+}
+
+.buy-icon__fill {
+	fill: $action-basket-buttons;
+}
+// стили кастомного скроллбара
+.scroll-wrapper {
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: relative;
+}
+
+.scroll-wrapper > .scroll-content {
+	border: none !important;
+	box-sizing: content-box !important;
+	height: auto;
+	left: 0;
+	margin: 0;
+	max-height: none;
+	max-width: none !important;
+	overflow-x: scroll !important;
+	padding: 0;
+	position: relative !important;
+	top: 0;
+	width: auto !important;
+}
+
+.scroll-wrapper > .scroll-content::-webkit-scrollbar {
+	height: 0;
+	width: 0;
+}
+
+.scroll-element {
+	display: none;
+}
+
+.scroll-element,
+.scroll-element div {
+	box-sizing: content-box;
+}
+
+.scroll-element.scroll-x.scroll-scrollx_visible,
+.scroll-element.scroll-y.scroll-scrolly_visible {
+	display: block;
+}
+
+.scroll-element.scroll-x {
+	display: none!important;
+}
+
+.scroll-element .scroll-arrow,
+.scroll-element .scroll-bar {
+	cursor: default;
+}
+
+.scroll-textarea {
+	border: 1px solid #cccccc;
+	border-top-color: #999999;
+}
+
+.scroll-textarea > .scroll-content {
+	overflow: hidden !important;
+}
+
+.scroll-textarea > .scroll-content > textarea {
+	border: none !important;
+	box-sizing: border-box;
+	height: 100% !important;
+	margin: 0;
+	max-height: none !important;
+	max-width: none !important;
+	overflow: scroll !important;
+	outline: none;
+	padding: 2px;
+	position: relative !important;
+	top: 0;
+	width: 100% !important;
+}
+
+.scroll-textarea > .scroll-content > textarea::-webkit-scrollbar {
+	height: 0;
+	width: 0;
+}
+/*************** SIMPLE INNER SCROLLBAR ***************/
+.scrollbar-inner > .scroll-element,
+.scrollbar-inner > .scroll-element div {
+	border: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	z-index: 10;
+}
+
+.scrollbar-inner > .scroll-element div {
+	display: block;
+	height: 100%;
+	left: 0;
+	top: 0;
+	width: 100%;
+}
+
+.scrollbar-inner > .scroll-element.scroll-x {
+	bottom: 2px;
+	height: 8px;
+	left: 0;
+	width: 100%;
+}
+
+.scrollbar-inner > .scroll-element.scroll-y {
+	height: 100%;
+	left: 2px;
+	top: 0;
+	width: 4px;
+}
+
+.scrollbar-inner > .scroll-element .scroll-element_outer {
+	overflow: hidden;
+}
+
+.scrollbar-inner > .scroll-element .scroll-bar,
+.scrollbar-inner > .scroll-element .scroll-element_outer,
+.scrollbar-inner > .scroll-element .scroll-element_track {
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+}
+
+.scrollbar-inner > .scroll-element .scroll-bar,
+.scrollbar-inner > .scroll-element .scroll-element_track {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+	filter: alpha(opacity=40);
+	opacity: 0.4;
+}
+
+.scrollbar-inner > .scroll-element .scroll-element_track {
+	background-color: rgba(51,51,51,0.15);
+}
+
+.scrollbar-inner > .scroll-element .scroll-bar {
+	background-color: $call-form;
+}
+
+.scrollbar-inner > .scroll-element:hover .scroll-bar {
+	background-color: #919191;
+}
+
+.scrollbar-inner > .scroll-element.scroll-draggable .scroll-bar {
+	background-color: #919191;
+}
+/* update scrollbar offset if both scrolls are visible */
+.scrollbar-inner > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_track {
+	left: -12px;
+}
+
+.scrollbar-inner > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_track {
+	top: -12px;
+}
+
+.scrollbar-inner > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_size {
+	left: -12px;
+}
+
+.scrollbar-inner > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_size {
+	top: -12px;
+}
+//@media (min-width: 1920px) {
+//	.scrollbar-inner > .scroll-element .scroll-bar {
+//		width: 4px;
+//	}
+//}
+// БЛОК СОЦИАЛЬНЫХ СЕТЕЙ
+.social-block {}
+@media (min-width: 768px) {
+	.container {
+		padding: 0 16px;
+	}
+
+	.wrapper {
+		padding: 0;
+		margin-top: 14px;
+	}
+	// заголовки блоков
+	.block-title {
+		flex-wrap: nowrap;
+
+		&__map {
+			h2 {
+				font-size: 18px;
+				line-height: 23px;
+			}
+		}
+
+		a {
+			padding: 11px 0;
+		}
+		// поиск для карты
+		.map__search {
+			flex-basis: 440px;
+			width: 440px;
+			margin-top: 0;
+
+			.map-btns {
+				display: none;
+			}
+
+			.map__search-block {
+				display: flex;
+				justify-content: space-between;
+			}
+
+			.map__search-input {
+				font-size: 12px;
+				line-height: 14px;
+			}
+		}
+	}
+}
+@media (min-width: 1280px) {
+	.container {
+		padding: 0 32px;
+	}
+	// заголовки блоков
+	.block-title {
+		h2 {
+			font-size: 24px;
+			line-height: 29px;
+		}
+
+		.map__search {
+			flex-basis: 460px;
+			width: 460px;
+		}
+	}
+
+	.main-content--three-columns {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+	}
+
+	.wrapper .main-content {
+		width: 66%;
+	}
+	.close--no-desktop {
+		display: none;
+	}
+}
+@media (min-width: 1920px) {
+	.container {
+		max-width: 1920px;
+	}
+
+	.main-content {
+		width: 83%;
+
+		&.w64 {
+			width: 66%;
+		}
+	}
+
+	.wrapper .main-content {
+		width: 61%;
+	}
+}
+//фиксированная шапка карточки товара/серии
+//@media (min-width: 1280px) {
+//	.product-header-fixed {
+//		position: relative;
+//
+//		&.fixed {
+//			position: fixed;
+//			top: 0;
+//			right: 32px;
+//			width: 80.3%;
+//			z-index: 6;
+//		}
+//	}
+//}
+
+.close {
+	border: none;
+	background-color: transparent;
+	position: absolute;
+	top: -10px;
+	right: -10px;
+
+	&::after,
+	&::before {
+		content: "";
+		width: 15px;
+		height: 1px;
+		background-color: #333333;
+		display: block;
+	}
+
+	&::after {
+		transform: rotate(45deg);
+	}
+
+	&::before {
+		transform: rotate(-45deg);
+	}
+}

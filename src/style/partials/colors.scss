@@ -1,0 +1,50 @@
+.colors {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	&__color-name {
+		flex-basis: 100%;
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 21px;
+		color: $dark;
+		margin-bottom: 7px;
+	}
+
+	&__item {
+		padding: 2px;
+		width: 20px;
+		height: 20px;
+		background-color: transparent;
+		box-sizing: content-box;
+		transition: all 0.2s;
+		border: 1px solid transparent;
+
+		&:not(&--not-btn).active {
+			border-color: $dark;
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+
+	&__name {
+		font-size: 14px;
+		line-height: 21px;
+		color: $dark;
+	}
+
+	li {
+		display: flex;
+		flex-direction: column;
+	}
+
+	li:last-child {
+		margin-right: 0;
+	}
+}

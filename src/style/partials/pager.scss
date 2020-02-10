@@ -1,0 +1,102 @@
+.pager {
+	position:relative;
+	display: block;
+	width: auto;
+	height: auto;
+	margin: 50px auto 0;
+	padding: 0;
+	text-align: center;
+
+	&.hidden-1280 {
+		display: none;
+	}
+
+	&__list {
+		position:relative;
+		display: inline-block;
+		vertical-align: middle;
+		width: 100%;
+		height: auto;
+		margin: 0 auto;
+		padding: 0;
+		font-size: 0;
+		list-style-type: none;
+
+		.list__item {
+			position:relative;
+			display: inline-block;
+			vertical-align: middle;
+			width: auto;
+			height: auto;
+			margin: 0 8px 0 0;
+			padding: 0;
+			border-radius: 1px;
+			border: 1px solid #E9E9E9;
+
+			.link {
+				position:relative;
+				display: block;
+				width: 100%;
+				height: auto;
+				margin: 0 auto;
+				padding: 17px 18px;
+				font-size: 16px;
+				line-height: 16px;
+				font-weight: 300;
+				text-decoration: none;
+				cursor: pointer;
+
+				.icon {
+					position:relative;
+					display: block;
+					width: 8px;
+					height: auto;
+					margin: 1px auto;
+					padding: 0;
+
+					use {
+						fill: none;
+						stroke: #333333;
+					}
+				}
+			}
+
+
+			&:hover, &.active {
+				border: 1px solid #D33234;
+
+				.link {
+					color: #D33234;
+
+					use {
+						stroke: #D33234;
+					}
+				}
+			}
+
+			&:last-child {
+				margin: 0;
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.pager {
+		display: block;
+		text-align: right;
+
+		&__list {
+			margin: 0 0 0 auto;
+		}
+	}
+}
+
+@media (min-width: 1280px) {
+	.pager {
+
+		&.hidden-1280 {
+			display: block;
+		}
+	}
+}

@@ -1,0 +1,25 @@
+<svg width="74" height="58" viewBox="0 0 74 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0)">
+<path d="M0 25.9474H42.7368" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M59.5264 25.9474H73.2632" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M4.57886 25.9474V58" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M68.6843 25.9474V58" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M22.8946 25.9474H4.57886V36.6316H22.8946V25.9474Z" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M22.8946 36.6316H4.57886V47.3158H22.8946V36.6316Z" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M12.2104 30.5263H15.2631" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M12.2104 41.2105H15.2631" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M47.3157 42.7368V54.9473" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M56.4738 58V54.9473C56.4738 54.1079 55.7869 53.421 54.9474 53.421H39.6843C38.8448 53.421 38.158 54.1079 38.158 54.9473V58" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M47.3157 53.421V58" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M33.5789 42.7368V36.6315C33.5789 34.9526 34.9525 33.5789 36.6315 33.5789H42.7368" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M35.1053 1.52631H9.15796V18.3158H35.1053V1.52631Z" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M18.3157 18.3158V22.8947" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M25.9473 18.3158V22.8947" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M54.9473 42.7368H42.7368V12.2105C42.7368 10.5316 44.1105 9.1579 45.7894 9.1579H56.4737C58.1526 9.1579 59.5263 10.5316 59.5263 12.2105V38.1579C59.5263 40.6916 57.481 42.7368 54.9473 42.7368Z" stroke="#D33234" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M30.5264 42.7368H42.7369" stroke="#D33234" stroke-width="2" stroke-miterlimit="10"/>
+</g>
+<defs>
+<clipPath id="clip0">
+</clipPath>
+</defs>
+</svg>

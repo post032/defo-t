@@ -1,0 +1,139 @@
+.why-defo {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	padding: 0;
+
+	.h2 {
+		position: relative;
+		display: block;
+		width: 100%;
+		height: auto;
+		margin: 0 auto 30px;
+		padding: 0 20px;
+		font-size: 18px;
+		line-height: 23px;
+		font-weight: 400;
+		color: #292E3C;
+	}
+
+	.three-columns__list {
+		position: relative;
+		display: block;
+		width: 100%;
+		height: auto;
+		margin: 0 auto 30px;
+		padding: 0 20px;
+		border-bottom: 1px solid #F3F3F3;
+		font-size: 0;
+		list-style-type: none;
+
+		.list__item {
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+			width: 100%;
+			height: auto;
+			margin: 0 0 20px;
+			padding: 0;
+
+			.icon {
+				position: relative;
+				display: inline-block;
+				vertical-align: top;
+				width: 68px;
+				height: 58px;
+				margin: 0 20px 0 0;
+				padding: 0;
+			}
+
+			.description {
+				position: relative;
+				display: inline-block;
+				vertical-align: top;
+				width: calc(100% - 100px);
+				height: auto;
+				margin:  0;
+				padding: 0;
+
+				.title {
+					position: relative;
+					display: block;
+					width: 100%;
+					height: auto;
+					margin: 0 0 20px;
+					padding: 0;
+					font-size: 18px;
+					line-height: 23px;
+					font-weight: 400;
+				}
+
+				p {
+					position: relative;
+					display: block;
+					width: 100%;
+					height: auto;
+					margin: 0 0 20px;
+					padding: 0;
+					font-size: 14px;
+					line-height: 19px;
+					font-weight: 300;
+					color: #333333;
+
+					a {
+						font-weight: 400;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.why-defo {
+
+		.h2 {
+			font-size: 24px;
+			line-height: 29px;
+			font-weight: 400;
+			color: #292E3C;
+		}
+
+		.three-columns__list {
+
+			.list__item {
+				width: 49%;
+				margin: 0 2% 30px 0;
+
+				&:nth-child(2n) {
+					margin: 0 0 20px;
+				}
+			}
+		}
+	}
+}
+
+
+
+@media (min-width: 1280px) {
+	.why-defo {
+
+		.three-columns__list {
+
+			.list__item {
+				width: 32%;
+				margin: 0 1.5% 30px 0;
+
+				&:nth-child(2n) {
+					margin: 0 1.5% 30px 0;
+				}
+
+				&:nth-child(3n) {
+					margin: 0 0 20px;
+				}
+			}
+		}
+	}
+}

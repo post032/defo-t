@@ -1,0 +1,146 @@
+.like {
+	box-sizing: border-box;
+	position: relative;
+	background-color: $white-bg;
+	padding: 0 8px;
+	display: flex;
+	flex-direction: column;
+	padding-top: 17px;
+	padding-bottom: 12px;
+
+	&__wrapper {
+		margin-top: 8px;
+		margin-bottom: 8px;
+	}
+
+	&__mark {
+		fill: $like-smile;
+	}
+
+	&__text {
+		font-style: 400;
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 120%;
+		color: $call-form;
+		min-width: 88px;
+		min-height: 16px;
+	}
+
+	&__title {
+		font-style: normal;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 21px;
+		color: $black-custom;
+		padding: 0 40px;
+	}
+
+	&__choice {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		min-height: 58px;
+		width: 230px;
+		margin: 0 40px 4px;
+	}
+
+	&__block {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__link {
+		font-style: normal;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 16px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		text-transform: uppercase;
+		color: $black-custom;
+		border: 1px solid $dark;
+		width: 304px;
+		min-height: 32px;
+		margin-bottom: 8px;
+	}
+}
+
+.like__input:checked + .like__label .like__mark {
+	width: 22px;
+	height: 22px;
+	fill: $red;
+}
+
+.like__input:checked + .like__label .like__text {
+	color: $red;
+	font-weight: 400;
+}
+@media (min-width: 768px) {
+	.like {
+		padding-bottom: 24px;
+		align-items: center;
+
+		&__block {
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			// padding: 0 149px;
+			width: 470px;
+		}
+
+		&__block:first-child {
+			margin-bottom: 20px;
+		}
+
+		&__choice {
+			min-height: 45px;
+			width: 215px;
+			margin: 0;
+		}
+
+		&__title {
+			padding: 0;
+		}
+
+		&__text {
+			min-width: 79px;
+		}
+
+		&__link {
+			width: 213px;
+		}
+
+		&__link:first-child {
+			width: 224px;
+		}
+	}
+}
+@media (min-width: 1280px) {
+	.like__block {
+		padding: 0;
+	}
+}
+@media (min-width: 1920px) {
+	.like {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding-left: 32px;
+		padding-right: 32px;
+		padding-bottom: 0;
+
+		&__block {
+			padding: 0;
+			width: 450px;
+		}
+
+		&__link {
+			margin-bottom: 18px;
+		}
+	}
+}

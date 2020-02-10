@@ -1,0 +1,244 @@
+.sidebar-filter {
+	background-color: $white;
+	margin-bottom: 16px;
+	&__title {
+		font-size: 14px;
+		line-height: 17px;
+		font-weight: 400;
+		color: $header-dark;
+		padding: 15px 20px;
+		border-bottom: 1px solid $input-background;
+	}
+
+	&__block {
+		padding: 0 20px;
+		border-bottom: 1px solid $input-background;
+	}
+
+	&__block-title {
+		font-size: 14px;
+		line-height: 17px;
+		color: $header-dark;
+		padding: 15px 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		cursor: pointer;
+
+		&.active {
+			.arrow {
+				transform: rotate(180deg);
+			}
+		}
+
+		.arrow {
+			position: relative;
+			width: 10px;
+			height: 17px;
+
+			&:after {
+				position: absolute;
+				content: url("../img/icons/arrow-little-black.svg");
+				top: 0;
+				right: 0;
+			}
+		}
+	}
+
+	&__block-content {
+		padding: 8px 0 24px;
+		display: none;
+	}
+
+	.checkbox-item {
+		position: relative;
+		margin-bottom: 8px;
+
+		&:nth-last-of-type(1) {
+			margin-bottom: 0;
+		}
+
+		.checkbox {
+			position: absolute;
+
+			&:checked + label:before {
+				background-color: $header-dark;
+			}
+			&:checked + label:after {
+				opacity: 1;
+			}
+		}
+
+		label {
+			padding: 0 0 0 34px;
+			cursor: pointer;
+			font-weight: 300;
+			font-size: 14px;
+			line-height: 17px;
+			display: block;
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+				left: 0;
+				width: 16px;
+				height: 16px;
+				background: $header-search-bg;
+				transition: .2s;
+			}
+
+			&:after {
+				content: "";
+				background-image: url("../img/icons/sidebar-filter-checkbox.svg");
+				background-position: center center;
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				margin: auto;
+				width: 16px;
+				height: 16px;
+				opacity: 0;
+				transition: .2s;
+			}
+		}
+	}
+
+	.colors-block {
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: -16px;
+	}
+
+	.colors-block__item {
+		position: relative;
+		height:	38px;
+		width: 38px;
+		margin-right: 15px;
+		margin-bottom: 16px;
+		&:nth-of-type(5n) {
+			margin-right: 0;
+		}
+
+		.color-checkbox {
+			position: absolute;
+
+			&:checked + label:before {
+				border: 1px solid black;
+			}
+		}
+
+		label {
+			cursor: pointer;
+			display: inline-block;
+			height:	38px;
+			width: 38px;
+
+			img {
+				width: 100%;
+			}
+
+			&:before {
+				content: "";
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+				left: -4px;
+				width: 46px;
+				height: 46px;
+				border: 1px solid $white;
+				transition: .2s;
+			}
+		}
+	}
+
+	.range-block {
+		.irs--flat .irs-line {
+			top: 25px;
+			height: 4px;
+			background-color: $input-background;
+			border-radius: 0;
+		}
+
+		.irs--flat .irs-bar {
+			height: 4px;
+			background-color: $red;
+		}
+
+		.irs--flat .irs-min, .irs--flat .irs-max {
+			top: 0;
+			padding: 1px 3px;
+			font-weight: 300;
+			font-size: 14px;
+			line-height: 17px;
+			background: none;
+			border-radius: 0;
+			color: $header-dark;
+		}
+
+		.irs--flat .irs-handle {
+			top: 22px;
+			width: 9px;
+			height: 20px;
+
+		}
+		.irs--flat .irs-handle i {
+			left: 0;
+			width: 9px;
+			height: 9px;
+			border-radius: 50px;
+			background-color: $red;
+			border: 1px solid $white;
+			box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
+		}
+
+		.irs--flat .irs-from, .irs--flat .irs-to, .irs--flat .irs-single {
+			color: $white;
+			font-weight: 300;
+			font-size: 12px;
+			line-height: 17px;
+			text-shadow: none;
+			padding: 1px 5px;
+			background-color: $red;
+			border-radius: 0;
+		}
+	}
+
+
+	&__btns {
+		padding: 15px 20px;
+		display: flex;
+		justify-content: space-between;
+		.submit {
+			background: $header-dark;
+			font-weight: 500;
+			font-size: 14px;
+			color: $white;
+			line-height: 16px;
+			border-radius: 1px;
+			border: none;
+			text-transform: uppercase;
+			padding: 13px 0;
+			width: 120px;
+			text-align: center;
+		}
+		.reset {
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 16px;
+			border: none;
+			color: $header-dark;
+			background: none;
+			border-radius: 1px;
+			text-transform: uppercase;
+			padding: 13px 0;
+			width: 120px;
+			text-align: center;
+		}
+	}
+}
+
+

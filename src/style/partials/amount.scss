@@ -1,0 +1,27 @@
+.amount {
+	position: relative;
+	padding-left: 22px;
+	font-size: 14px;
+	line-height: 17px;
+	color: $title-gray;
+
+	&:before {
+		content: url("../img/icons/much.svg");
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	&--much {
+		color: $amount-much;
+	}
+
+	&--few {
+		color: $amount-few;
+	}
+
+	&--special {
+		color: $amount-special;
+	}
+}

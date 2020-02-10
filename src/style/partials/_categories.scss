@@ -1,0 +1,168 @@
+.categories-preview {
+	display: flex;
+	margin-bottom: 26px;
+	margin-right: -8px;
+	overflow-x: scroll;
+
+	&__column {
+		display: flex;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	img {
+		width: 100%;
+		z-index: -1;
+		transition: all 0.2s;
+	}
+
+	&__wrapper {
+		position: relative;
+		display: flex;
+		min-width: 287px;
+		max-height: 179px;
+		margin-right: 8px;
+
+		&--vertical {
+			margin-right: 0;
+		}
+	}
+
+	&__card {
+		display: flex;
+		width: 100%;
+		transition: all 0.2s;
+	}
+
+	&__name {
+		position: absolute;
+		top: 32px;
+		width: 100%;
+		font-size: 18px;
+		font-weight: 500;
+		line-height: 21px;
+		text-align: center;
+		color: $white;
+		transition: all 0.2s;
+	}
+
+	&__column-extra {
+		display: flex;
+	}
+
+	&__column-half {
+		display: flex;
+	}
+}
+
+@media(min-width: 768px) {
+	.categories-preview {
+		margin-bottom: 30px;
+		margin-right: 0;
+
+		&__column {
+			flex-wrap: wrap;
+			justify-content: space-between;
+			margin-right: 40px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
+		&__wrapper {
+			min-height: 240px;
+			width: 348px;
+			margin: 0;
+
+			&:first-child:not(&--vertical) {
+				margin-bottom: 8px;
+			}
+
+			&--big {
+				width: 704px;
+			}
+
+			&--vertical {
+				max-height: 100%;
+			}
+		}
+
+		&__column-extra {
+			flex-direction: column;
+			margin-right: 8px;
+		}
+	}
+}
+
+@media(min-width: 1280px) {
+	.categories-preview {
+		margin: 0;
+		margin-bottom: 32px;
+		overflow-x: initial;
+
+		&__card {
+			&:hover {
+				background-color: rgba(51, 51, 51, 0.8);
+
+				.categories-preview__name {
+					top: 64px;
+				}
+			}
+		}
+
+		&__wrapper {
+			min-width: 300px;
+			width: 49%;
+
+			&--big {
+				min-width: 605px;
+				width: 100%;
+			}
+
+			&--vertical {
+				width: 100%;
+			}
+		}
+
+		&__column {
+			margin-right: 8px;
+
+			&:first-child,
+			&--half {
+				width: 51%;
+			}
+
+			&:last-child {
+				width: 50%;
+			}
+		}
+
+		&__column-extra {
+			width: 50%;
+
+			.categories-preview__wrapper {
+				width: 100%;
+			}
+		}
+	}
+}
+
+
+@media(min-width: 1920px) {
+	.categories-preview {
+		&__wrapper {
+			min-width: 380px;
+
+			&--big {
+				min-width: 770px;
+			}
+		}
+
+		&__column-extra &__wrapper {
+			width: 100%;
+		}
+	}
+}

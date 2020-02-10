@@ -1,0 +1,116 @@
+// ХЛЕБНЫЕ КРОШКИ
+.breadcrumbs {
+	padding: 0 0 16px;
+	&__list {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		display: flex;
+		align-items: center;
+		font-size: 12px;
+		line-height: 14px;
+		color: $header-dark;
+	}
+
+	&__dropdown-list {
+		display: none;
+	}
+
+	&__item {
+		display: none;
+		align-items: center;
+		position: relative;
+		margin-right: 25px;
+		&.back {
+			display: block;
+			&:before {
+				display: none;
+			}
+		}
+
+		&:nth-last-of-type(1) {
+			display: block;
+
+		}
+
+		&:before {
+			position: absolute;
+			content: '';
+			left: -13px;
+			bottom: 0;
+			top: 0;
+			margin: auto;
+			width: 4px;
+			height: 4px;
+			border-radius: 100%;
+			background-color: $header-dark;
+
+		}
+	}
+
+	&.breadcrumbs--menu {
+		display: none;
+		padding: 16px;
+		margin: 0;
+		background-color: $header-search-bg;
+		.breadcrumbs__list {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+			display: flex;
+			align-items: center;
+			font-size: 12px;
+			line-height: 14px;
+			color: $header-dark;
+		}
+
+
+	}
+}
+
+@media (min-width: 768px) {
+
+	.breadcrumbs {
+		&__list {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+			display: flex;
+			align-items: center;
+			font-size: 12px;
+			line-height: 14px;
+			color: $header-text-gray;
+		}
+
+		&__dropdown-list {
+			display: none;
+		}
+
+		&__item {
+			display: flex;
+			margin-right: 15px;
+
+			&.back {
+				display: none;
+			}
+
+			&:before {
+				display: none;
+			}
+		}
+
+		&__item-link {
+			margin-right: 5px;
+		}
+
+		&.breadcrumbs--menu {
+
+			.breadcrumbs__item {
+				&.back {
+					display: inline-block;
+				}
+			}
+
+		}
+	}
+}

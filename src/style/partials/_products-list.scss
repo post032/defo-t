@@ -1,0 +1,89 @@
+//===============ПРЕВЬЮ КАРТОЧКИ ТОВАРА В БЛОКЕ==============
+
+.products {
+	position: relative;
+	z-index: 5;
+	margin-right: -8px;
+
+	&.recommended {
+		margin-right: 0;
+	}
+
+	& + section {
+		position: relative;
+		z-index: 1;
+	}
+
+	& + .services {
+		z-index: 4;
+	}
+
+	&__list {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	&__card {
+		margin: 0;
+		margin-right: 8px;
+	}
+
+	&__more {
+		display: none;
+		margin: 0 auto;
+		margin-top: 30px;
+	}
+}
+
+@media(min-width: 1280px) {
+	.products {
+		&__more {
+			display: block;
+		}
+
+		&--main-page {
+			//	ВРЕМЕННОЕ РЕШЕНИЕ, НУЖНО ПРОКОНСУЛЬТИРОВАТЬСЯ С АНТОНОМ
+
+			.product:last-child {
+				display: none;
+			}
+		}
+	}
+}
+
+@media (min-width: 1920px) {
+	.products {
+		&--main-page {
+
+			//	ВРЕМЕННОЕ РЕШЕНИЕ, НУЖНО ПРОКОНСУЛЬТИРОВАТЬСЯ С АНТОНОМ
+
+			.product:last-child {
+				display: block;
+			}
+		}
+	}
+
+}
+
+//===============НОВИНКИ==============
+
+.new-items {
+	margin-bottom: 44px;
+}
+
+@media(min-width: 768px) {
+	.new-items {
+		margin-bottom: 48px;
+	}
+}
+
+//===============ПОПУЛЯРНОЕ==============
+
+.popular-items {
+	margin-bottom: 44px;
+}

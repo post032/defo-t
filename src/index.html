@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="css/libs.css" type="text/css" rel="stylesheet">
+	<link href="css/style.css" type="text/css" rel="stylesheet">
+	<title>Дэфо</title>
+</head>
+
+<body class="main-page">
+
+	<header class="header">
+
+		//= partials/_header.html
+
+	</header>
+	<main>
+		<div class="container main-container wrapper">
+			<div class="sidebar">
+				<a href="#" class="sidebar__item">
+					<img src="img/sidebar-banner-adv.jpg" alt="баннер на скидку до 70%">
+				</a>
+			</div>
+			<div class="main-content">
+				//= partials/_way.html
+				//= partials/partials/_article-header.html
+				//= partials/_article.html
+				<div class="like__wrapper">
+					//= partials/_like.html
+					//= partials/_question.html
+				</div>
+				<div class="comments__wrapper">
+					//= partials/_comments2.html
+				</div>
+				//= partials/_share.html
+				<section class="products new-items products--main-page article__items">
+					<div class="block-title">
+						<h2>
+							Товары, упомянутые в статье
+						</h2>
+					</div>
+					<div class="products__list article__products">
+						//= partials/_product-hover.html
+						<article class="products__card product product--collection product--big">
+							<div class="product__main-wrap">
+								<header class="product__header">
+									<ul class="product__marks marks">
+										<li class="marks__arrow marks__arrow--click">
+											<p class="marks__item">выгодная покупка</p>
+											<svg width="26" height="26" tabindex="0">
+												<use xlink:href="img/icons/sprite.svg#arrow-down-border"></use>
+											</svg>
+										</li>
+										<li class="marks__extra">
+											<p class="marks__item">Всеобщая любовь</p>
+										</li>
+									</ul>
+									<div class="product__icons icons icons--action">
+										<button type="button" class="buy-icon delay">
+											<svg class="buy-icon__stroke" width="17" height="16">
+												<use xlink:href="img/icons/sprite.svg#basket-delay"></use>
+											</svg>
+											<span class="buy-icon__hint">В избранное</span>
+										</button>
+										<button type="button" class="buy-icon compare">
+											<svg class="buy-icon__fill" width="17" height="16">
+												<use xlink:href="img/icons/sprite.svg#basket-compare"></use>
+											</svg>
+											<span class="buy-icon__hint">Сравнить</span>
+										</button>
+									</div>
+								</header>
+								<div class="product__content">
+									<div class="product__demonstration">
+										<div class="product__gallery">
+											<div class="product__gallery-image">
+												<img class="product__image lazy-image" data-src="img/products/table.jpg" alt="" width="248" height="244">
+											</div>
+											<div class="product__gallery-image">
+												<img class="product__image lazy-image" data-src="img/products/table.jpg" alt="" width="248" height="244">
+											</div>
+											<div class="product__gallery-image">
+												<img class="product__image lazy-image" data-src="img/products/table.jpg" alt="" width="248" height="244">
+											</div>
+											<div class="product__gallery-image">
+												<img class="product__image lazy-image" data-src="img/products/table.jpg" alt="" width="248" height="244">
+											</div>
+											<div class="product__gallery-image">
+												<img class="product__image lazy-image" data-src="img/products/table.jpg" alt="" width="248" height="244">
+											</div>
+											<div class="product__gallery-image">
+												<img class="product__image lazy-image" data-src="img/products/table.jpg" alt="" width="248" height="244">
+											</div>
+											<div class="product__gallery-image">
+												<img class="product__image lazy-image" data-src="img/products/table.jpg" alt="" width="248" height="244">
+											</div>
+											<div class="product__gallery-image">
+												<img class="product__image lazy-image" data-src="img/products/table.jpg" alt="" width="248" height="244">
+											</div>
+										</div>
+										<button class="product__fast-view fast-view">Быстрый просмотр</button>
+									</div>
+									<div class="product__score-wrap">
+										<ul class="product__rating rating">
+											<li>
+												<svg width="13" height="12" class="rating__item rating__item--voted" aria-label="1">
+													<use xlink:href="img/icons/sprite.svg#rating-star"></use>
+												</svg>
+											</li>
+											<li>
+												<svg width="13" height="12" class="rating__item rating__item--voted" aria-label="2">
+													<use xlink:href="img/icons/sprite.svg#rating-star"></use>
+												</svg>
+											</li>
+											<li>
+												<svg width="13" height="12" class="rating__item rating__item--voted" aria-label="3">
+													<use xlink:href="img/icons/sprite.svg#rating-star"></use>
+												</svg>
+											</li>
+											<li>
+												<svg width="13" height="12" class="rating__item rating__item--voted" aria-label="4">
+													<use xlink:href="img/icons/sprite.svg#rating-star"></use>
+												</svg>
+											</li>
+											<li>
+												<svg width="13" height="12" class="rating__item" aria-label="5">
+													<use xlink:href="img/icons/sprite.svg#rating-star"></use>
+												</svg>
+											</li>
+										</ul>
+										<p class="product__recommend recommend"><a href="#">76 рекомендует</a></p>
+									</div>
+									<div class="product__name-wrapper">
+										<h3 class="product__name"><a href="catalog-element.html">Стол руководителя A с тумбой 190х255х75, орех, конструктор</a></h3>
+										<p class="product__advantage product__advantage--guaranty">10 лет гарантии</p>
+									</div>
+								</div>
+								<div class="product__price-info prices">
+									<div class="prices__wrapper">
+										<!-- <div class="prices__sale-wrap">
+										<p class="prices__old">29 260 ₽</p>
+										<span class="prices__sale percent">-31%</span>
+									</div> -->
+										<p class="prices__new">20 130 ₽</p>
+										<span class="prices__vat">в т.ч. НДС</span>
+									</div>
+									<button class="product__buy simple-button">Купить</button>
+								</div>
+								<div class="product__info">
+									<div class="product__total-wrapper total">
+										<p class="total__title">Общая стоимость</p>
+										<p class="total__price">486 860 <small>₽</small></p>
+									</div>
+									<div class="product__change-amount-wrap">
+										<p class="product__change-amount change-amount">
+											<button class="change-amount__regulator change-amount__regulator--minus">уменьшить количество</button>
+											<input type="text" class="change-amount__text" name="quantity" value="1">
+											<button class="change-amount__regulator change-amount__regulator--plus">увеличить количество</button>
+										</p>
+									</div>
+									<p class="product__amount-wrap">
+										<span class="product__amount amount amount--much">Много</span>
+										<button class="product__cheaper call-form FORM_CHEAPER">Нашли дешевле?</button>
+									</p>
+								</div>
+								<div class="product__colors">
+									<div class="product__description">
+										Президент-комплект CHORUS воплощает лучшие традиции итальянского дизайна, благодаря инновационным конструктивным решениям, основателен и изящен.
+									</div>
+									<div class="product__colors-wrapper">
+										<span class="product__colors-title">Цветовые решения</span>
+										<ul class="product__colors-list colors">
+											<li>
+												<button class="colors__item">
+													<img data-src="img/colors/red.png" class="lazy-image" alt="Красный" width="24" height="24">
+												</button>
+											</li>
+											<li>
+												<button class="colors__item">
+													<img data-src="img/colors/gray.png" class="lazy-image" alt="Серый" width="24" height="24">
+												</button>
+											</li>
+											<li>
+												<button class="colors__item">
+													<img data-src="img/colors/yellow.png" class="lazy-image" alt="Желтый" width="24" height="24">
+												</button>
+											</li>
+											<li>
+												<button class="colors__item">
+													<img data-src="img/colors/green.png" class="lazy-image" alt="Зеленый" width="24" height="24">
+												</button>
+											</li>
+										</ul>
+										<span class="product__colors-title">Доп. цвета</span>
+										<ul class="product__colors-list colors">
+											<li>
+												<button class="colors__item">
+													<img data-src="img/colors/red.png" class="lazy-image" alt="Красный" width="24" height="24">
+												</button>
+											</li>
+											<li>
+												<button class="colors__item">
+													<img data-src="img/colors/gray.png" class="lazy-image" alt="Серый" width="24" height="24">
+												</button>
+											</li>
+											<li>
+												<button class="colors__item">
+													<img data-src="img/colors/yellow.png" class="lazy-image" alt="Желтый" width="24" height="24">
+												</button>
+											</li>
+											<li>
+												<button class="colors__item">
+													<img data-src="img/colors/green.png" class="lazy-image" alt="Зеленый" width="24" height="24">
+												</button>
+											</li>
+										</ul>
+									</div>
+									<button class="product__another-color call-form">Нужна серия в другом цвете?</button>
+								</div>
+								<footer class="product__footer">
+									<p class="product__warehouse">
+										<span class="product__vendor-code vendor-code">Артикул 7#79548</span>
+										<span class="product__vendor-code vendor-code">Код товара 237486</span>
+									</p>
+									<p class="product__buyers-like buyers-like">Покупателям нравится <br><span class="buyers-like__mark">Комфорт, Качественная сборка</span></p>
+								</footer>
+							</div>
+						</article>
+						//= partials/_product-hover.html
+						//= partials/_product-hover.html
+						//= partials/_product-hover.html
+						//= partials/_product-hover.html
+						//= partials/_product-big-hover.html
+					</div>
+
+					<button class="products__more simple-button">Показать еще</button>
+				</section>
+				<section class="states article__items">
+					<div class="block-title">
+						<h2>
+							Статьи
+						</h2>
+						<a href="javascript:;">Читать все</a>
+					</div>
+					<div class="states__wrapper">
+						<a href="javascript:;" class="states__item">
+							<div class="states__item-content">
+								<div class="states__image">
+									<img data-src="img/state.jpg" class="lazy-image" alt="">
+								</div>
+								<div class="states__info">
+									<p class="states__date">10 декабря 2019</p>
+									<h4 class="states__title">Как правильно подобрать мебель для современного офиса</h4>
+									<p class="states__read">Читать полностью</p>
+
+								</div>
+								<div class="hidden-text">
+									<p class="states__date">10 декабря 2019</p>
+									<h4 class="states__title">Как правильно подобрать мебель для современного офиса</h4>
+									<p class="states__text">
+										Исследование проведено группой компаний HeadHunter совместно с компанией «Здоровый офис»
+									</p>
+								</div>
+							</div>
+
+						</a>
+
+						<a href="javascript:;" class="states__item">
+							<div class="states__item-content">
+								<div class="states__image">
+									<img data-src="img/state.jpg" class="lazy-image" alt="">
+								</div>
+								<div class="states__info">
+									<p class="states__date">10 декабря 2019</p>
+									<h4 class="states__title">Как правильно подобрать мебель для современного офиса</h4>
+									<p class="states__read">Читать полностью</p>
+
+								</div>
+								<div class="hidden-text">
+									<p class="states__date">10 декабря 2019</p>
+									<h4 class="states__title">Как правильно подобрать мебель для современного офиса</h4>
+									<p class="states__text">
+										Исследование проведено группой компаний HeadHunter совместно с компанией «Здоровый офис»
+									</p>
+								</div>
+							</div>
+
+						</a>
+						<a href="javascript:;" class="states__item">
+							<div class="states__item-content">
+								<div class="states__image">
+									<img data-src="img/state.jpg" class="lazy-image" alt="">
+								</div>
+								<div class="states__info">
+									<p class="states__date">10 декабря 2019</p>
+									<h4 class="states__title">Как правильно подобрать мебель для современного офиса</h4>
+									<p class="states__read">Читать полностью</p>
+
+								</div>
+								<div class="hidden-text">
+									<p class="states__date">10 декабря 2019</p>
+									<h4 class="states__title">Как правильно подобрать мебель для современного офиса</h4>
+									<p class="states__text">
+										Исследование проведено группой компаний HeadHunter совместно с компанией «Здоровый офис»
+									</p>
+								</div>
+							</div>
+
+						</a>
+						<a href="javascript:;" class="states__item">
+							<div class="states__item-content">
+								<div class="states__image">
+									<img data-src="img/state.jpg" class="lazy-image" alt="">
+								</div>
+								<div class="states__info">
+									<p class="states__date">10 декабря 2019</p>
+									<h4 class="states__title">Как правильно подобрать мебель для современного офиса</h4>
+									<p class="states__read">Читать полностью</p>
+
+								</div>
+								<div class="hidden-text">
+									<p class="states__date">10 декабря 2019</p>
+									<h4 class="states__title">Как правильно подобрать мебель для современного офиса</h4>
+									<p class="states__text">
+										Исследование проведено группой компаний HeadHunter совместно с компанией «Здоровый офис»
+									</p>
+								</div>
+							</div>
+
+						</a>
+						<a href="javascript:;" class="states__item">
+							<div class="states__item-content">
+								<div class="states__image">
+									<img data-src="img/state.jpg" class="lazy-image" alt="">
+								</div>
+								<div class="states__info">
+									<p class="states__date">10 декабря 2019</p>
+									<h4 class="states__title">Как правильно подобрать мебель для современного офиса</h4>
+									<p class="states__read">Читать полностью</p>
+
+								</div>
+								<div class="hidden-text">
+									<p class="states__date">10 декабря 2019</p>
+									<h4 class="states__title">Как правильно подобрать мебель для современного офиса</h4>
+									<p class="states__text">
+										Исследование проведено группой компаний HeadHunter совместно с компанией «Здоровый офис»
+									</p>
+								</div>
+							</div>
+
+						</a>
+						<a href="javascript:;" class="states__item">
+							<div class="states__item-content">
+								<div class="states__image">
+									<img data-src="img/state.jpg" class="lazy-image" alt="">
+								</div>
+								<div class="states__info">
+									<p class="states__date">10 декабря 2019</p>
+									<h4 class="states__title">Как правильно подобрать мебель для современного офиса</h4>
+									<p class="states__read">Читать полностью</p>
+
+								</div>
+								<div class="hidden-text">
+									<p class="states__date">10 декабря 2019</p>
+									<h4 class="states__title">Как правильно подобрать мебель для современного офиса</h4>
+									<p class="states__text">
+										Исследование проведено группой компаний HeadHunter совместно с компанией «Здоровый офис»
+									</p>
+								</div>
+							</div>
+
+						</a>
+						<a href="javascript:;" class="states__item">
+							<div class="states__item-content">
+								<div class="states__image">
+									<img data-src="img/state.jpg" class="lazy-image" alt="">
+								</div>
+								<div class="states__info">
+									<p class="states__date">10 декабря 2019</p>
+									<h4 class="states__title">Как правильно подобрать мебель для современного офиса</h4>
+									<p class="states__read">Читать полностью</p>
+
+								</div>
+								<div class="hidden-text">
+									<p class="states__date">10 декабря 2019</p>
+									<h4 class="states__title">Как правильно подобрать мебель для современного офиса</h4>
+									<p class="states__text">
+										Исследование проведено группой компаний HeadHunter совместно с компанией «Здоровый офис»
+									</p>
+								</div>
+							</div>
+
+						</a>
+					</div>
+				</section>
+			</div>
+			<div class="article-content">
+				//= partials/_request-form.html
+			</div>
+		</div>
+	</main>
+
+	//= partials/_footer.html
+
+	<!--<script src="js/jquery.js"></script>-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<!-- <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>" type="text/javascript"></script> -->
+	<script src="js/libs.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/city-choose.js"></script>
+	<script src="js/segments.js"></script>
+	<script src="js/menu.js"></script>
+	<script src="js/search.js"></script>
+	<script src="js/filter-btns.js"></script>
+	<script src="js/catalog.js"></script>
+	<script src="js/news.js"></script>
+	<script src="js/states.js"></script>
+	<script src="js/partners.js"></script>
+	<script src="js/instagram.js"></script>
+	<script src="js/reviews.js"></script>
+	<script src="js/footer.js"></script>
+	<script src="js/toTop.js"></script>
+	<script src="js/services-tabs.js"></script>
+	<script src="js/basket-popup.js"></script>
+	<script src="js/phone-choose.js"></script>
+	<script src="js/colors.js"></script>
+	<script src="js/article.js"></script>
+	<script src="js/connect.js"></script>
+	<script src="js/comments.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+.buy-icon {
+	position: relative;
+	display: block;
+	margin-left: 30px;
+	padding: 0;
+	background-color: transparent;
+	border: none;
+
+	&--active {
+		.buy-icon__stroke {
+			fill: $red;
+			stroke: $red;
+		}
+
+		.buy-icon__fill {
+			fill: $red;
+		}
+	}
+
+	&__hint {
+		display: none;
+	}
+}
+
+@media (min-width: 1280px) {
+	.buy-icon {
+		transition: all 0.2s;
+
+		&__hint {
+			position: absolute;
+			top: -35px;
+			left: 50%;
+			display: none;
+			padding: 5px;
+			font-size: 14px;
+			color: $black-custom;
+			text-align: center;
+			text-transform: lowercase;
+			white-space: nowrap;
+			background-color: $white;
+			border: 1px solid $rating-default;
+			border-radius: 3px;
+			box-sizing: border-box;
+			box-shadow: 0 4px 8px $services-shadow;
+			transform: translateX(-50%);
+			transition: all 0.2s;
+		}
+
+		&:hover {
+
+			svg {
+				transition: all 0.2s;
+
+				&:hover {
+					transform: scale(1.1);
+				}
+			}
+
+			.buy-icon__hint {
+				display: block;
+				z-index: 1;
+			}
+		}
+	}
+}

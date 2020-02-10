@@ -1,0 +1,135 @@
+.promocodes {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	&__item {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		margin-left: -8px;
+		margin-right: -8px;
+		margin-bottom: 8px;
+		background-color: $product-border;
+	}
+
+	&__content {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		padding-right: 10px;
+		padding-bottom: 14px;
+		padding-left: 65px;
+		padding-top: 16px;
+
+		&:before {
+			content: url("../img/icons/promocode.svg");
+			position: absolute;
+			left: 6px;
+			top: 3px;
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__text {
+		font-size: 12px;
+		line-height: 14px;
+		color: $header-top-menu;
+	}
+
+	&__code {
+		font-weight: 300;
+		line-height: 21px;
+		font-size: 14px;
+		color: $dark;
+	}
+
+	&__sale {
+		font-size: 24px;
+		line-height: 28px;
+		color: $black-custom;
+	}
+
+	&__delete {
+		position: relative;
+		width: 60px;
+		padding: 0;
+		border: none;
+		background-color: transparent;
+
+		&:before,
+		&:after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			background-color: $old-price;
+			height: 2px;
+			width: 16px;
+		}
+
+		&:before {
+			transform: translate(-50%, -50%) rotate(45deg);
+		}
+
+		&:after {
+			transform: translate(-50%, -50%) rotate(-45deg);
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.promocodes {
+		&__item {
+			margin: 0;
+		}
+
+		&__promocode {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+}
+
+
+@media (min-width: 1280px) {
+	.promocodes {
+		&__item {
+			margin: 0;
+		}
+
+		&__content {
+			padding-top: 21px;
+			padding-bottom: 27px;
+			padding-right: 32px;
+			padding-left: 135px;
+
+			&:before {
+				left: 25px;
+			}
+		}
+
+		&__wrapper {
+			flex-direction: row;
+		}
+
+		&__text {
+			margin-right: 95px;
+		}
+
+		&__code {
+			font-size: 16px;
+			line-height: 19px;
+		}
+
+		&__delete {
+			width: 82px;
+		}
+	}
+}

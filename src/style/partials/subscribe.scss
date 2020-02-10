@@ -1,0 +1,46 @@
+.subscribe {
+	display: flex;
+
+	&__input {
+		padding: 16px 20px;
+		width: 100%;
+		font-size: 12px;
+		font-weight: 600;
+		background-color: $input-background;
+		border: none;
+		box-sizing: border-box;
+	}
+
+	&__input::-moz-placeholder {
+		text-transform: uppercase;
+	};
+
+	&__input:-moz-placeholder {
+		text-transform: uppercase;
+	};
+
+	&__input:-ms-input-placeholder {
+		text-transform: uppercase;
+	};
+
+	&__input::-webkit-input-placeholder {
+		text-transform: uppercase;
+	};
+
+	&__input::-webkit-input-placeholder {
+		text-transform: uppercase;
+	};
+
+
+	&__button {
+		padding: 13px 18px;
+		width: 48px;
+		height: 48px;
+		border: none;
+		background-color: $red;
+	}
+
+	&__arrow {
+		fill: $white;
+	}
+}

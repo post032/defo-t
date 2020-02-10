@@ -1,0 +1,46 @@
+.marks {
+	position: relative;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+
+	&__item {
+		display: inline-block;
+		padding: 4px 8px;
+		font-size: 12px;
+		font-weight: 500;
+		line-height: 16px;
+		text-transform: uppercase;
+		color: $header-dark;
+		box-sizing: border-box;
+		border: 1px solid $buyers-like-marks;
+		border-radius: 5px;
+		background-color: $white;
+	}
+
+	&__extra {
+		position: absolute;
+		display: none;
+		padding: 0;
+		list-style: none;
+		z-index: 3;
+		margin-top: 5px;
+	}
+
+	&__arrow {
+		display: flex;
+
+		svg {
+			margin-left: 4px;
+			transition: all 0.2s;
+		}
+
+		&--click.active {
+			svg {
+				transform: scaleY(-1);
+			}
+		}
+	}
+
+
+}

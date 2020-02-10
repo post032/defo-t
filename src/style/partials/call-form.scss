@@ -1,0 +1,14 @@
+.call-form {
+	padding: 0;
+	font-size: 12px;
+	line-height: 14px;
+	color: $call-form;
+	border: none;
+	background-color: transparent;
+
+	&--big {
+		text-transform: uppercase;
+		font-weight: 500;
+		color: $opacity-gray;
+	}
+}

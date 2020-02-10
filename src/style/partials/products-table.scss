@@ -1,0 +1,158 @@
+.products-table {
+	min-width: 100%;
+	border-collapse: collapse;
+
+	&__title {
+		background-color: $product-border;
+	}
+
+	&__title-item {
+		position: sticky;
+		top: 0;
+		left: 0;
+		padding-top: 13px;
+		padding-bottom: 13px;
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 16px;
+		color: $black-custom;
+		text-align: left;
+		background-color: $product-border;
+		z-index: 3;
+
+		&:first-child {
+			padding-left: 20px;
+		}
+	}
+
+	&__stroke {
+		border-bottom: 1px solid $product-border;
+
+		td {
+			vertical-align: middle;
+			box-sizing: content-box;
+		}
+	}
+
+	&__image {
+		padding-top: 22px;
+		padding-left: 14px;
+		padding-bottom: 18px;
+		padding-right: 20px;
+		width: 106px;
+
+		img {
+			max-height: 72px;
+			margin: auto;
+		}
+	}
+
+	&__name {
+		padding-right: 20px;
+		width: 116px;
+	}
+
+	&__name-title {
+		margin-bottom: 5px;
+		font-size: 16px;
+		line-height: 19px;
+		font-weight: 300;
+		color: $dark;
+	}
+
+	&__vendor-code {
+		margin-bottom: 8px;
+	}
+
+	&__texture {
+		font-size: 12px;
+		font-weight: 300;
+		line-height: 14px;
+
+		color: $header-top-menu;
+
+		b {
+			font-weight: 400;
+			color: $black-custom;
+		}
+	}
+
+	&__price {
+		padding-right: 20px;
+
+		.prices__new {
+			font-size: 24px;
+			line-height: 29px;
+			color: $black-custom;
+		}
+	}
+
+	&__counter {
+		padding-right: 20px;
+
+		.change-amount__text {
+			padding-top: 9px;
+			padding-bottom: 9px;
+		}
+	}
+
+	&__cost {
+		padding-right: 20px;
+
+		span {
+			font-size: 24px;
+			line-height: 28px;
+			color: $black-custom;
+		}
+	}
+
+	&__favorites {
+		padding-right: 20px;
+
+		.icons {
+			width: 48px;
+			height: 48px;
+		}
+
+		.buy-icon {
+			margin: auto;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+
+	&__delete {
+		padding-right: 25px;
+
+		button {
+			position: relative;
+			padding: 0;
+			margin: 0;
+			width: 12px;
+			height: 12px;
+			border: none;
+			background-color: transparent;
+
+			&:before,
+			&:after {
+				content: "";
+				position: absolute;
+				left: -1px;
+				top: 5px;
+				height: 2px;
+				width: 14px;
+				background-color: $old-price;
+			}
+
+			&:before {
+				transform: rotate(45deg);
+			}
+
+			&:after {
+				transform: rotate(-45deg);
+			}
+		}
+	}
+
+
+}

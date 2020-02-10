@@ -1,0 +1,52 @@
+.big-banner {
+	margin: 44px -8px;
+	min-height: 171px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+	background-color: $old-price;
+
+	&--first {
+		background-image: url("../img/banners/big-banner-first.jpg");
+	}
+
+	&--second {
+		background-image: url("../img/banners/big-banner-second.jpg");
+	}
+
+	&--third {
+		margin-bottom: 0;
+		background-image: url("../img/banners/big-banner-third.jpg");
+	}
+}
+
+@media (min-width: 768px) {
+	.big-banner {
+		margin: 48px -16px;
+		min-height: 256px;
+
+		&--third {
+			margin-bottom: 48px;
+		}
+	}
+}
+
+@media (min-width: 1280px) {
+	.big-banner {
+		margin: 45px 0;
+		background-position: 0 0;
+
+		&--first {
+			background-image: url("../img/banners/big-banner-first-laptop.jpg");
+		}
+
+		&--second {
+			background-image: url("../img/banners/big-banner-second-laptop.jpg");
+		}
+
+		&--third {
+			margin-bottom: 45px;
+			background-image: url("../img/banners/big-banner-third-laptop.jpg");
+		}
+	}
+}

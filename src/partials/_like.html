@@ -1,0 +1,45 @@
+<section class="like">
+	<div class="like__block">
+		<h2 class="like__title">Понравилась статья?</h2>
+		<form class="like__choice" action="#" method="post">
+			<input id="verygood" class="like__input visually-hidden" type="radio" name="like" value="очень нравится" checked>
+			<label for="verygood" class="like__label">
+				<svg class="like__mark" width="18" height="18">
+					<use xlink:href="img/icons/like-sprite.svg#like-verygood"></use>
+				</svg>
+			</label>
+			<input id="good" class="like__input visually-hidden" type="radio" name="like" value="нравится">
+			<label for="good" class="like__label">
+				<svg class="like__mark" width="18" height="18">
+					<use xlink:href="img/icons/like-sprite.svg#like-good"></use>
+				</svg>
+			</label>
+			<input id="normal" class="like__input visually-hidden" type="radio" name="like" value="нормально">
+			<label for="normal" class="like__label">
+				<svg class="like__mark" width="18" height="18">
+					<use xlink:href="img/icons/like-sprite.svg#like-normal"></use>
+				</svg>
+			</label>
+			<input id="badly" class="like__input visually-hidden" type="radio" name="like" value="плохо">
+			<label for="badly" class="like__label">
+				<svg class="like__mark" width="18" height="18">
+					<use xlink:href="img/icons/like-sprite.svg#like-badly"></use>
+				</svg>
+			</label>
+			<input id="terribly" class="like__input visually-hidden" type="radio" name="like" value="очень плохо">
+			<label for="terribly" class="like__label">
+				<svg class="like__mark" width="18" height="18">
+					<use xlink:href="img/icons/like-sprite.svg#like-terribly"></use>
+				</svg>
+			</label>
+			<input id="useful" class="like__input visually-hidden" type="radio" name="like" value="очень плохо">
+			<label for="useful" class="like__label">
+				<p class="like__text">Полезно</p>
+			</label>
+		</form>
+	</div>
+	<div class="like__block">
+		<a href="#comments" class="like__link comment__open">оставить комментарий</a>
+		<a href="javascript:;" class="like__link question__open">задать вопрос автору</a>
+	</div>
+</section>

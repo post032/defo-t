@@ -1,0 +1,155 @@
+.buy-buttons {
+	display: none;
+	justify-content: space-between;
+	align-items: flex-start;
+	align-self: center;
+
+
+	&.buy-buttons--mobile {
+		display: flex;
+		justify-content: flex-start;
+		padding: 20px 9px 20px;
+		margin: 0 -9px;
+		border-top: 1px solid $input-background;
+
+		.right {
+			margin-left: 20px;
+		}
+	}
+
+	&__price-info {
+		padding: 0;
+		display: block;
+		border: none;
+
+		.prices__vat {
+			font-size: 14px;
+			line-height: 17px;
+			color: $header-top-menu;
+			display: block;
+			margin-top: -2px;
+		}
+	}
+
+	&__change-amount-wrap {
+		margin-top: 3px;
+		.change-amount {
+			height: 58px;
+			width: 119px;
+		}
+	}
+
+	&__buy-btn, &__fast-buy-btn {
+		margin-bottom: 40px;
+		background-color: $red;
+		color: $white;
+		border: 1px solid $red;
+		width: 154px;
+		padding: 20px 0;
+	}
+
+	&__fast-buy-btn {
+		background-color: $white;
+		border: 1px solid $dark;
+		color: $dark;
+		margin-bottom: 0;
+	}
+
+}
+
+.buy-buttons-fixed {
+	position: fixed;
+	z-index: 9;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	background-color: $white;
+	transform: translateY(100px);
+	transition: 0.3s;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+	padding: 9px;
+
+	&.show {
+		transform: translateY(0);
+		transition: 0.3s;
+	}
+
+	.prices {
+		font-size: 24px;
+		line-height: 29px;
+		color: $dark;
+	}
+
+	.right {
+		display: flex;
+		align-items: center;
+	}
+
+	.buy-buttons__buy-btn, .buy-buttons__fast-buy-btn {
+		margin-bottom: 0;
+		width: auto;
+		font-weight: 500;
+		font-size: 10px;
+		height: 31px;
+		line-height: 12px;
+		padding: 0;
+	}
+
+	.buy-buttons__buy-btn {
+		width: 88px;
+	}
+
+	.buy-buttons__fast-buy-btn {
+		width: 78px;
+		margin-left: 8px;
+	}
+}
+
+@media (min-width: 768px) {
+	.buy-buttons {
+		display: flex;
+		flex-basis: 350px;
+
+		&.buy-buttons--mobile {
+			display: none !important;
+			padding-left: 0;
+		}
+	}
+}
+
+@media (min-width: 1280px) {
+	.buy-buttons {
+		display: flex;
+		flex-basis: 635px;
+		align-self: flex-end;
+
+		.left {
+			display: flex;
+			width: 100%;
+			justify-content: space-between;
+		}
+
+		.right {
+			display: flex;
+			margin-top: 7px;
+		}
+
+		&__price-info {
+
+		}
+
+		&__change-amount-wrap {
+			margin-top: 7px;
+		}
+
+		&__buy-btn, &__fast-buy-btn {
+			margin-bottom: 0;
+			margin-left: 20px;
+		}
+	}
+
+
+}

@@ -1,0 +1,178 @@
+.near-shops {
+	margin: 0 -8px;
+	margin-bottom: 8px;
+	padding: 0;
+	list-style: none;
+	background-color: $white;
+
+	&__card {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		justify-content: space-between;
+		padding: 20px 17px;
+		border-bottom: 1px solid $main-bg;
+	}
+
+	&__address-wrapper {
+		margin-bottom: 35px;
+	}
+
+	&__address {
+		margin-bottom: 12px;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 19px;
+		color: $dark;
+	}
+
+	&__phone {
+		display: block;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 17px;
+		color: $dark;
+	}
+
+	&__amount-wrap {
+		width: 100%;
+		margin-bottom: 20px;
+		font-size: 14px;
+		line-height: 17px;
+		font-weight: 400;
+		color: $amount-special;
+	}
+
+	&__amount {
+		padding-left: 0;
+		margin-left: 5px;
+
+		&:before {
+			content: none;
+		}
+	}
+
+	&__metro {
+		margin-bottom: 5px;
+	}
+
+	&__shop-inform {
+		margin-bottom: 20px;
+	}
+
+	&__time {
+		margin-bottom: 5px;
+		font-size: 14px;
+		line-height: 17px;
+		color: $amount-special;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__call-form {
+		margin-left: 15px;
+	}
+
+	&__show-all {
+		padding: 20px 17px;
+		font-size: 13px;
+		line-height: 17px;
+		color: $black-custom;
+
+		a {
+			position: relative;
+			display: block;
+
+			&:before {
+				content: "";
+				position: absolute;
+				top: 50%;
+				right: 0;
+				display: block;
+				width: 8px;
+				height: 8px;
+				border: 2px solid $title-gray;
+				border-top: none;
+				border-left: none;
+				transform: translateY(-50%) rotate(-45deg);
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.near-shops {
+		margin: 0;
+		margin-bottom: 8px;
+
+		&__card {
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: flex-start;
+		}
+
+		&__amount-wrap {
+			width: 50%;
+			display: flex;
+			justify-content: flex-end;
+		}
+
+		&__buttons {
+			margin-top: -22px;
+			flex-direction: column-reverse
+		}
+
+		&__call-form {
+			max-width: 100px;
+			margin-left: 0;
+			margin-bottom: 15px;
+			margin-top: -15px;
+		}
+
+		&__shop-inform {
+			width: 50%;
+			margin-bottom: 0;
+		}
+
+		&__simple-button {
+			margin-right: 18px;
+			width: 130px;
+			margin-top: 6px;
+			padding-top: 13px;
+			padding-bottom: 10px;
+		}
+
+		&__show-all {
+			font-size: 14px;
+		}
+	}
+}
+
+@media (min-width: 1280px) {
+	.near-shops {
+
+		&__card {
+			padding: 12px 20px;
+		}
+
+		&__amount-wrap {
+			width: auto;
+		}
+
+		&__show-all {
+			font-size: 14px;
+		}
+
+		.near-shops__address-wrapper {
+			width: 50%;
+		}
+	}
+}

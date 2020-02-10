@@ -1,0 +1,37 @@
+.prices-and-regions {
+	&__list {
+		margin: 0 -20px;
+		padding: 20px;
+		padding-top: 0;
+		list-style: none;
+		border-bottom: 1px solid $product-border;
+	}
+
+	&__link {
+		display: block;
+		margin-bottom: 8px;
+		font-size: 14px;
+		line-height: 21px;
+		font-weight: 300;
+		color: $dark;
+		text-decoration: underline;
+	}
+
+	&__regions {
+		margin: 0;
+		margin-top: 20px;
+		padding: 0;
+		list-style: none;
+	}
+
+	&__region {
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 21px;
+		margin-bottom: 8px;
+
+		b {
+			font-weight: 400;
+		}
+	}
+}

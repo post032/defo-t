@@ -1,0 +1,235 @@
+.project {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	padding: 10px 0;
+
+	&__card {
+		position: relative;
+		display: block;
+		width: 100%;
+		height: auto;
+		min-height: 500px;
+		margin: 20px 10px 15px 0;
+		padding: 0;
+		font-size: 0;
+		background: #fff;
+		box-shadow: none;
+
+		.image {
+			position: relative;
+			display: block;
+			width: calc(100% + 40px);
+			height: auto;
+			margin: 0 0 20px -20px;
+			padding: 0;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+
+			img {
+				position: relative;
+				display: block;
+				width: 100%;
+				height: auto;
+				margin: 0;
+				padding: 0;
+				opacity: 0;
+			}
+		}
+ 
+		.about {
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+			width: 100%;
+			height: auto;
+			margin: 0;
+			padding: 30px 20px 30px;
+			text-align: left;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+
+			.breadcrumbs {
+				position: absolute;
+				left: 0;
+				top: -30px;
+			}
+
+			.hr {
+				position: relative;
+				display: block;
+				width: 100%;
+				height: 1px;
+				margin: 20px 0;
+				padding: 0;
+				background: #efefef;
+			}
+
+			.title {
+				position: relative;
+				display: block;
+				width: 100%;
+				height: auto;
+				margin: 0 0 20px;
+				padding: 0;
+				font-size: 18px;
+				line-height: 23px;
+				font-weight: 400;
+			}
+
+			p {
+				position: relative;
+				display: block;
+				width: 100%;
+				height: auto;
+				margin: 0 0 20px;
+				padding: 0;
+				font-size: 14px;
+				line-height: 21px;
+				font-weight: 300;
+				color: #292E3C;
+			}
+
+			.button {
+				position: relative;
+				display: block;
+				width: 100%;
+				padding: 15px 0;
+				margin: 0 auto;
+				font-weight: 500;
+				font-size: 14px;
+				line-height: 16px;
+				color: rgba(41, 46, 60, 0.88);
+				text-align: center;
+				text-transform: uppercase;
+				border: 1px solid #292e3c;
+				background-color: transparent;
+				-webkit-transition: all 0.2s;
+				transition: all 0.2s;
+
+				&:hover {
+					-webkit-box-shadow: none;
+					box-shadow: none;
+					background: #D33234;
+					border: 1px solid transparent;
+					color: #ffffff;
+				}
+			}
+		}
+	}
+}
+
+@media(min-width: 568px) {
+	.project__card {
+		margin-top: 0;
+		
+		.about {
+			display: inline-block;
+			vertical-align: top;
+			width: 50%;
+			padding: 30px 20px 50px;
+
+			.breadcrumbs {
+				left: auto;
+				top: auto;
+				position: relative;
+			}
+		}
+
+		.image {
+			position: absolute;
+			display: inline-block;
+			vertical-align: top;
+			width: 50%;
+			height: 100%;
+			right: 0;
+			top: 0;
+			bottom: 0;
+		}
+	}
+}
+
+@media(min-width: 768px) {
+	.project__card {
+		margin-top: 0;
+		
+		.about {
+
+			.button {
+				max-width: 180px;
+				margin-left: 0;
+			}
+		}
+	}
+}
+
+@media(min-width: 960px) {
+	.project__card {
+		.about {
+			width: 30%;
+
+			.button {
+				display: none;
+			}
+		}
+
+		.image {
+			width: 70%;
+		}
+	}
+}
+
+
+@media(min-width: 1280px) {
+	.project {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		width: 80%;
+		height: auto;
+		margin: 0 16px 0 0;
+
+		&__card {
+			.about {
+				width: 38%;
+			}
+			.image {
+				width: 63%;
+			}
+		}
+
+		&-side {
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+			width: 28%;
+			height: auto;
+			margin: 0 auto;
+			padding: 10px 0;
+		}
+	}
+}
+
+@media(min-width: 1920px) {
+	.project {
+		width: 80%;
+
+		&__card {
+			.about {
+				width: 30%;
+			}
+			.image {
+				width: 70%;
+			}
+		}
+
+		&-side {
+			width: 23%;
+		}
+	}
+}

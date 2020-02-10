@@ -1,0 +1,413 @@
+.product-information {
+	margin: 0 -8px;
+	margin-bottom: 8px;
+	padding: 20px 8px;
+	background-color: $white;
+
+	&__title {
+		position: relative;
+		margin: 0;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 22px;
+		color: $dark;
+
+		a {
+			display: block;
+			font-size: 18px;
+			font-weight: 400;
+			line-height: 22px;
+			color: $dark;
+		}
+
+		&--margin {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__content {
+		margin-top: 16px;
+	}
+
+	&--accordion {
+		.product-information__title:not(.no-toggle):before {
+			content: url("../img/icons/arrow-little-black.svg");
+			position: absolute;
+			top: 3px;
+			right: 5px;
+			transform: rotate(180deg);
+			transition: all 0.2s;
+		}
+
+		.product-information__title.active:before {
+			top: -3px;
+			transform: rotate(360deg);
+		}
+
+		.product-information__content{
+			display: none;
+		}
+	}
+
+	.characteristics-list.js-more {
+		height: 250px;
+		overflow-y: hidden;
+	}
+
+	.characteristics-list.show-all {
+		height: auto;
+	}
+
+	&__dots-list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	&__dots-item {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-bottom: 15px;
+		font-size: 12px;
+		line-height: 14px;
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: 10px;
+			width: 100%;
+			border-bottom: 1px dashed $amount-special;
+			z-index: 1;
+		}
+	}
+
+	&__criterion {
+		position: relative;
+		padding-right: 3px;
+		font-weight: 300;
+		color: $amount-special;
+		background-color: $white;
+		z-index: 2;
+	}
+
+	&__desc {
+		position: relative;
+		padding-left: 3px;
+		max-width: 145px;
+		font-weight: 400;
+		color: #333333;
+		text-align: right;
+		z-index: 2;
+		background-color: $white;
+	}
+
+	&__mechanism-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__mechanism {
+		display: block;
+		margin-bottom: 30px;
+	}
+
+	&__mechanism-text {
+		//max-width: 300px;
+	}
+
+	&__mechanism-demo {
+		display: block;
+	}
+
+	&__text {
+		margin-bottom: 40px;
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 21px;
+		color: $dark;
+
+		&--read-more {
+			margin-bottom: 20px;
+		}
+
+		&--advantage {
+			margin-bottom: 0;
+		}
+	}
+
+	&__read-more {
+		display: none;
+		padding: 0;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 21px;
+		color: $dark;
+		border: none;
+		background-color: transparent;
+
+		&.js-more {
+			display: block;
+		}
+	}
+
+	&__description {
+		margin-bottom: 20px;
+
+		.product-information__text.js-more {
+			height: 45px;
+			overflow-y: hidden;
+		}
+
+		.product-information__text.show-all {
+			height: auto;
+		}
+	}
+
+	&__download {
+		margin: 0 -8px;;
+		padding-top: 20px;
+		border-top: 1px solid $main-bg;
+
+		.product-information__title {
+			margin-bottom: 20px;
+			padding: 0 8px;
+		}
+	}
+
+	&__download-wrap {
+		padding: 0 8px;
+	}
+
+	&__download-link {
+		display: block;
+		max-width: 235px;
+		margin-bottom: 14px;
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 17px;
+		color: $header-icons;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__download-size {
+		margin-left: 40px;
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 17px;
+		color: $amount-special;
+	}
+
+	&__modification-item {
+		min-width: 143px;
+		max-width: 143px;
+	}
+
+	&__modification-image {
+		display: block;
+
+		img {
+			margin: 0 auto;
+			max-height: 157px;
+			width: auto;
+		}
+	}
+
+	&__modification-name {
+		display: block;
+		margin-bottom: 12px;
+		font-size: 14px;
+		line-height: 17px;
+		color: $dark;
+	}
+
+	&__modification-price {
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 17px;
+		color: $amount-special;
+	}
+
+	&__advantages {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	&__advantage-item {
+		max-width: 250px;
+		min-width: 250px;
+		margin: 0 5px;
+	}
+
+	&__advantage-image {
+		display: block;
+		width: 100%;
+		margin-bottom: 20px;
+	}
+
+	&__advantage-title {
+		margin-bottom: 20px;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 22px;
+	}
+
+	&__simple-text {
+		margin: 0 -8px;
+		margin-top: 20px;
+		padding: 0 8px;
+		padding-top: 24px;
+		border-top: 1px solid $product-border;
+	}
+
+	&__simple-text-wrap {
+		margin-bottom: 40px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.product-information {
+		margin: 0;
+		margin-bottom: 8px;
+		padding: 20px;
+
+		&__mechanism-wrap {
+			flex-wrap: nowrap;
+			align-items: flex-start;
+		}
+
+		&__mechanism {
+			margin-bottom: 0;
+			margin-right: 16px;
+			max-width: 128px;
+		}
+
+		&__mechanism-text {
+			margin-right: 40px;
+			//max-width: 470px;
+		}
+
+		&__mechanism-demo {
+			max-height: 162px;
+		}
+
+		&__content-column {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&__description {
+			margin-bottom: 0;
+			max-width: 606px;
+		}
+
+		&__download {
+			margin: 0;
+			margin-top: -40px;
+			padding-top: 0;
+			border: none;
+		}
+
+		&__modification-item {
+			margin: 0 10px;
+		}
+
+		&__simple-text {
+			margin: 0 -20px;
+			margin-top: 20px;
+			padding: 0 20px;
+			padding-top: 32px;
+		}
+	}
+}
+
+@media (min-width: 1280px) {
+	.product-information {
+
+		.characteristics-list.js-more {
+			height: 115px;
+		}
+
+		.characteristics-list.show-all {
+			height: auto;
+		}
+
+		&__dots-list {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: flex-start;
+		}
+
+		&__dots-item {
+			width: 265px;
+		}
+
+		&--mechanism,
+		&--description,
+		&--modification {
+			width: 100%;
+			//min-width: 653px;
+		}
+
+		&__description {
+			max-width: 500px;
+		}
+
+		&--advantages,
+		&--characteristics {
+			width: 100%;
+		}
+
+		&__modification-item {
+			margin: 0 20px;
+		}
+
+		&__mechanism-wrap {
+			//align-items: center;
+			align-items: flex-start;
+			justify-content: space-between;
+		}
+
+		&__mechanism-text {
+			margin-right: 16px;
+			margin-bottom: 0;
+		}
+
+		&__mechanism-demo {
+			width: 222px;
+		}
+
+		&__advantage-item {
+			max-width: 24%;
+			min-width: 280px;
+		}
+	}
+}
+
+@media (min-width: 1920px) {
+	.product-information {
+		&__dots-item {
+			width: 275px;
+		}
+
+		&--mechanism-demo {
+			width: 274px;
+		}
+
+		&__mechanism-wrap {
+			align-items: center;
+		}
+	}
+}

@@ -1,0 +1,663 @@
+
+
+.collection-card {
+	.buy-buttons--collection {
+		display: flex;
+		justify-content: flex-start;
+		.left {
+			margin-right: 20px;
+			position: relative;
+		}
+
+		.right {
+			margin-top: 8px;
+		}
+
+		.buy-buttons__change-amount-wrap {
+			margin-top: 13px;
+
+			.change-amount {
+				width: 154px;
+			}
+		}
+
+		.buy-buttons__buy-btn, .buy-buttons__fast-buy-btn {
+			width: 130px;
+			height: 59px;
+			padding: 0 10px;
+			margin-bottom: 20px;
+		}
+
+		.call-form {
+			font-size: 14px;
+			line-height: 17px;
+			margin-top: 19px;
+		}
+	}
+
+	.free-services__title {
+		padding-top: 35px;
+	}
+
+	// название
+	&__name {
+		margin: 0;
+		padding: 24px 8px 11px;
+		border: none;
+	}
+
+	&__name-text {
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 21px;
+		color: $dark;
+	}
+
+	// цвета
+	&__colors-row {
+		padding: 0 8px 14px;
+		border-bottom: 1px solid $product-border;
+
+		.product-card__colors-list {
+			margin-bottom: 7px;
+		}
+
+		.call-form {
+			font-size: 14px;
+		}
+	}
+
+	// В комплект входит
+	&__products {
+		max-height: 378px;
+		overflow: auto;
+		padding: 19px 8px 19px 16px!important;
+		border-bottom: 1px solid $product-border;
+
+		& > div {
+			padding: 0!important;
+			border: none;
+		}
+	}
+
+	&__products-text {
+		font-size: 18px;
+		line-height: 22px;
+		color: $dark;
+		margin-bottom: 17px;
+	}
+
+
+	&__products-content {
+
+	}
+
+	// элементы
+	&__products-item {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 15px;
+
+		&:nth-last-of-type(1) {
+			margin-bottom: 0;
+		}
+	}
+
+	// название товара
+	&__products-name {
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 17px;
+		color: $header-dark;
+	}
+
+	&__products-info {
+		display: flex;
+	}
+
+	//цена
+	&__products-price {
+		margin-right: 16px;
+		font-size: 14px;
+		line-height: 17px;
+		color: $header-dark;
+		min-width: 70px;
+		.old-price {
+			color: $old-price;
+			position: relative;
+
+			&:after {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+				width: 100%;
+				height: 1px;
+				background-color: $old-price;
+				transform: rotate(-10deg);
+			}
+		}
+	}
+
+	// изменение количества
+	&__change-amount {
+		background-color: $input-background;
+		align-self: flex-end;
+		display: flex;
+		align-items: center;
+
+		.change-amount__regulator:before {
+			height: 2px;
+			width: 8px;
+		}
+
+		.change-amount__regulator--plus:after {
+			height: 8px;
+			width: 2px;
+		}
+
+		.change-amount__text {
+			height: 20px;
+			padding: 0;
+			background-color: $input-background;
+		}
+	}
+
+	.buy-buttons--collection-bottom {
+		display: flex;
+		justify-content: flex-start;
+		padding: 20px 15px;
+		max-width: 320px;
+		position: relative;
+
+		.left {
+			margin-right: 20px;
+			position: relative;
+			padding-bottom: 34px;
+			width: 100%;
+		}
+
+		.right {
+			margin-top: 10px;
+			padding-bottom: 34px;
+			position: relative;
+		}
+
+		.buy-buttons__buy-btn, .buy-buttons__fast-buy-btn {
+			width: 130px;
+			height: 59px;
+			padding: 0 10px;
+			margin-bottom: 20px;
+		}
+
+		.buy-buttons__fast-buy-btn {
+			margin-bottom: 0;
+		}
+		.buy-buttons__change-amount-wrap {
+			margin-top: 16px;
+
+			.change-amount {
+				width: 121px;
+			}
+		}
+
+		.call-form {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			font-size: 14px;
+			line-height: 17px;
+
+		}
+
+		.economy-text {
+			position: absolute;
+			right: 15px;
+			bottom: 20px;
+			font-weight: 300;
+			font-size: 16px;
+			line-height: 19px;
+			color: $header-dark;
+			white-space: nowrap;
+		}
+	}
+
+	&__social-block {
+		padding: 9px;
+		.social-block__title {
+			margin-bottom: 10px;
+			font-size: 18px;
+			line-height: 22px;
+			font-weight: 400;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.collection-card {
+		.series-card__main-info {
+			max-width: 277px;
+			width: auto;
+		}
+
+		.buy-buttons {
+			flex-basis: 450px;
+		}
+
+		.buy-buttons--collection {
+
+			padding: 0 20px;
+			justify-content: space-between;
+
+			.left {
+
+			}
+
+			.right {
+				margin-top: 0;
+			}
+
+			.call-form {
+				position: absolute;
+				bottom: 65px;
+				font-size: 12px;
+				margin-top: 0;
+			}
+
+			.buy-buttons__change-amount-wrap {
+				margin-top: 23px;
+
+				.change-amount {
+					width: 119px;
+				}
+			}
+
+			.buy-buttons__buy-btn, .buy-buttons__fast-buy-btn {
+				width: 214px;
+				margin-bottom: 37px;
+			}
+
+			.buy-buttons__fast-buy-btn {
+				margin-bottom: 0;
+			}
+		}
+
+		&__free-services {
+			margin-top: 20px;
+		}
+
+		.free-services__title {
+			padding-top: 18px;
+		}
+
+
+		// название
+		&__name {
+			padding: 28px 20px 12px;
+			border: none;
+		}
+
+		// цвета
+		&__colors-row {
+			padding: 0 20px 20px;
+			display: flex;
+			align-items: center;
+			flex-direction: row!important;
+
+			.product-card__colors-list {
+				margin-bottom: 0!important;
+				margin-right: 34px;
+			}
+
+			.product-card__colors-btns {
+				align-self: center;
+			}
+		}
+
+		// В комплект входит
+		&__products {
+			max-height: 280px;
+			padding: 15px 20px!important;
+		}
+
+		&__products-text {
+			font-size: 18px;
+			line-height: 22px;
+			color: $dark;
+			margin-bottom: 28px;
+		}
+
+
+		&__products-content {
+			overflow: hidden;
+		}
+		// элементы
+		&__products-item {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 16px;
+		}
+
+		// название товара
+		&__products-name {
+			font-weight: 300;
+			font-size: 14px;
+			line-height: 17px;
+			color: $header-dark;
+			position: relative;
+
+			&:after {
+				content: '';
+				position: absolute;
+				left: calc(100% + 50px);
+				bottom: 7px;
+				height: 1px;
+				width: 1000px;
+				border-bottom: 1px dashed $call-form;
+				z-index: 1;
+			}
+		}
+
+		&__products-info {
+			background-color: $white;
+			z-index: 3;
+			position: relative;
+			padding-left: 27px;
+		}
+
+		//цена
+		&__products-price {
+			font-size: 14px;
+			line-height: 17px;
+			color: $header-dark;
+			display: flex;
+
+			.old-price {
+				color: $old-price;
+				position: relative;
+				margin-right: 32px;
+			}
+		}
+
+		// изменение количества
+		&__change-amount {
+			background-color: $input-background;
+			align-self: flex-end;
+			display: flex;
+			align-items: center;
+
+			.change-amount__regulator:before {
+				height: 2px;
+				width: 8px;
+			}
+
+			.change-amount__regulator--plus:after {
+				height: 8px;
+				width: 2px;
+			}
+
+			.change-amount__text {
+				height: 20px;
+				padding: 0;
+				background-color: $input-background;
+			}
+		}
+
+		.buy-buttons--collection-bottom {
+			padding: 20px;
+			max-width: 450px;
+
+			.buy-buttons__buy-btn, .buy-buttons__fast-buy-btn {
+				width: 214px;
+			}
+		}
+
+		&__social-block {
+			padding: 9px 20px;
+			.social-block__title {
+				margin-bottom: 10px;
+			}
+		}
+	}
+}
+
+@media (min-width: 1280px) {
+	.collection-card {
+		&__header {
+
+		}
+
+		&__main-info {
+			order: 1;
+			padding-right: 20px;
+		}
+
+		.buy-buttons--collection {
+			order: 3;
+			max-width: 445px;
+			min-width: auto;
+			margin: 0 0 0 auto;
+			align-items: center;
+			align-self: center;
+			padding: 20px 0 20px 20px;
+			border-left: 1px solid $product-border;
+			.left {
+				align-items: center;
+				margin-right: 23px;
+			}
+			.right {
+				display: block;
+				margin: 0;
+			}
+
+			.call-form {
+				bottom: -10px;
+				right: 0;
+			}
+
+			.buy-buttons__buy-btn {
+				margin-bottom: 8px;
+				margin-left: 0;
+				width: 136px;
+				height: 45px;
+			}
+			.buy-buttons__fast-buy-btn {
+				margin-left: 0;
+				width: 136px;
+				height: 45px;
+			}
+
+			.buy-buttons__change-amount-wrap {
+				margin-top: 0;
+
+				.change-amount {
+					width: 99px;
+					height: 46px;
+				}
+			}
+		}
+
+		&__free-services {
+			order: 2;
+			margin-top: 0;
+			margin-left: auto;
+			align-self: flex-end;
+			padding-bottom: 17px!important;
+		}
+
+		.free-services__title {
+			padding-top: 0;
+		}
+
+		.series-card__tabs {
+			margin-bottom: 0;
+		}
+
+		.series-card__tabs-link {
+			margin-right: 8px;
+			padding: 25px 17px;
+		}
+
+		// название
+		&__name {
+			padding: 24px 20px;
+			border-bottom: 1px solid $product-border;
+		}
+
+		// цвета
+		&__colors-row {
+			padding: 14px 20px;
+			display: flex!important;
+			align-items: center;
+
+			.product-card__colors-list {
+				margin-bottom: 0!important;
+			}
+		}
+
+		.product-card__colors-btns {
+			align-self: center;
+			margin: 0;
+		}
+
+		// элементы
+		&__products {
+			padding: 17px 45px 17px 23px!important;
+			max-height: 374px;
+		}
+
+		&__products-text {
+			margin-bottom: 25px;
+		}
+
+		&__products-item {
+			align-items: center;
+		}
+
+		// название товара
+		&__products-name {
+			align-self: flex-end;
+
+			&:after {
+				content: '';
+				position: absolute;
+				left: calc(100% + 20px);
+				bottom: 3px;
+				height: 1px;
+				width: 1000px;
+				border-bottom: 1px dashed $call-form;
+				z-index: 1;
+			}
+		}
+
+		//цена
+		&__products-price {
+			align-items: center;
+			.old-price {
+
+				margin-right: 20px;
+			}
+		}
+
+		.buy-buttons--collection-bottom {
+			justify-content: space-between;
+			align-items: center;
+			position: relative;
+			padding: 20px 20px 50px;
+			max-width: 575px;
+
+			.left {
+				display: flex;
+				margin-right: 32px;
+				align-items: center;
+				padding-bottom: 0;
+			}
+			.right {
+				display: block;
+				padding-bottom: 0;
+				text-align: right;
+				margin: 0;
+			}
+
+			.call-form {
+				position: static;
+			}
+
+			.buy-buttons__change-amount-wrap {
+				margin-top: 0;
+			}
+
+			.buy-buttons__buy-btn, .buy-buttons__fast-buy-btn {
+				margin-bottom: 0;
+				margin-left: 0;
+			}
+
+			.buy-buttons__buy-btn {
+				margin-bottom: 8px;
+			}
+
+			.buy-buttons__fast-buy-btn {
+				margin-bottom: 0;
+			}
+
+			.economy-text {
+				position: absolute;
+				right: auto;
+				bottom: 30px;
+				left: 20px;
+			}
+		}
+	}
+}
+
+
+@media (min-width: 1920px) {
+	.collection-card {
+		&__free-services {
+			align-self: center;
+			padding-bottom: 0!important;
+		}
+
+		.buy-buttons--collection {
+			max-width: 549px;
+			flex-basis: 549px;
+
+			.buy-buttons__buy-btn {
+				width: 160px;
+			}
+			.buy-buttons__fast-buy-btn {
+				width: 160px;
+			}
+		}
+
+		&__name {
+			padding: 24px 20px;
+		}
+
+
+		// элементы
+		&__products {
+			padding: 17px 20px 17px 23px!important;
+			max-height: 374px;
+		}
+
+		.buy-buttons--collection-bottom {
+			.buy-buttons__buy-btn, .buy-buttons__fast-buy-btn {
+				margin-bottom: 8px;
+				width: 160px;
+			}
+
+
+		}
+
+		.services-tabs__content {
+			padding-top: 30px;
+		}
+
+		.services-tabs__text {
+			width: 235px;
+		}
+	}
+}

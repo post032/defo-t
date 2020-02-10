@@ -1,0 +1,128 @@
+.faq {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	width: calc(100% + 14px);
+	height: auto;
+	margin: 10px 0 0 -7px;
+	padding: 20px;
+	background: #fff;
+
+	&-list {
+		position: relative;
+		display: block;
+		width: 100%;
+		height: auto;
+		margin: 0;
+		padding: 0;
+
+		&__element {
+			position: relative;
+			display: block;
+			width: 100%;
+			height: auto;
+			margin: 0 0 10px;
+			padding: 20px 10px;
+			border: 1px solid #E9E9E9;
+
+			.line-header {
+				position: relative;
+				display: block;
+				width: 100%;
+				height: auto;
+				margin: 0;
+				padding: 0;
+				cursor: pointer;
+
+				.icon {
+					position: absolute;
+					display: block;
+					right: 0;
+					top: calc(50% - 10px);
+					width: 20px;
+					height: 20px;
+					margin: 0;
+					padding: 0;
+					font-size: 20px;
+					line-height: 20px;
+					font-weight: 700;
+					color: #333;
+					cursor: pointer;
+
+					.minus {
+						display: none;
+					}
+				}
+
+				.title {
+					position: relative;
+					display: block;
+					width: 90%;
+					height: auto;
+					margin: 0;
+					padding: 0;
+					font-size: 16px;
+					line-height: 21px;
+					font-weight: 400;
+				}
+			}
+
+
+			.content {
+				position: relative;
+				display: none;
+				width: calc(100% - 40px);
+				height: auto;
+				margin: 10px 0 0;
+				padding: 0;
+
+				p {
+					font-size: 14px;
+					line-height: 19px;
+					font-weight: 300;
+				}
+			}
+
+			&.active {
+				border: 1px solid #333333;
+
+				.header {
+					.icon {
+
+						.minus {
+							display: block;
+						}
+
+						.plus {
+							display: none;
+						}
+					}
+				}
+
+				.content {
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+
+@media(min-width: 768px) {
+	.faq {
+		display: block;
+		width: 100%;
+		margin: 10px 0 0 0;
+	}
+}
+
+@media(min-width: 1280px) {
+	.faq {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		width: 70%;
+		height: auto;
+		margin: 10px 2% 0 0;
+	}
+}

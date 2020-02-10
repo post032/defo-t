@@ -1,0 +1,163 @@
+.promo-inner {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: auto;
+	margin: 50px auto 0;
+	padding: 10px 0;
+	background-size: 200%;
+	background-position: top center;
+	background-repeat: no-repeat;
+
+	&__caption {
+		position: relative;
+		display: block;
+		width: 100%;
+		height: auto;
+		margin: 60% auto 0;
+		padding: 30px 10px;
+		background: #fff;
+
+		h1.page-title {
+			font-size: 24px;
+			line-height: 31px;
+			font-weight: 400;
+			margin-bottom: 20px;
+		}
+
+		p {
+			position: relative;
+			display: block;
+			width: 100%;
+			height: auto;
+			margin: 0;
+			padding: 0;
+			font-size: 14px;
+			line-height: 21px;
+			font-weight: 300;
+			color: #333;
+		}
+
+		.button {
+			position: relative;
+			display: block;
+			width: 100%;
+			height: auto;
+			margin: 20px 0 0;
+			padding: 25px 0;
+			background: #D33234;
+			color: #fff;
+			font-size: 14px;
+			line-height: 19px;
+			font-weight: 500;
+			text-align: center;
+			text-transform: uppercase;
+			letter-spacing: 0.03em;
+			transition: all 0.3s ease-in-out;
+		}
+	}
+
+	.breadcrumbs {
+		position: absolute;
+		left: 10px;
+		top: -32px;
+		width: calc(100% - 60px);
+		margin: 0 auto;
+	}
+}
+
+
+@media(min-width: 768px) {
+	.promo-inner {
+		position: relative;
+		display: block;
+		width: 100%;
+		height: auto;
+		min-height: 520px;
+		margin: 0 auto;
+		padding: 10px 0;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+
+		&__caption {
+			position: relative;
+			display: block;
+			width: calc(100% - 80px);
+			max-width: 360px;
+			height: auto;
+			margin:  10px 30px 0 10px;
+			padding: 30px;
+			background: #fff;
+
+			h1.page-title {
+				font-size: 36px;
+				line-height: 41px;
+				font-weight: 400;
+				margin-bottom: 30px;
+			}
+
+			.button {
+				position: relative;
+				display: block;
+				width: 100%;
+				height: auto;
+				margin: 20px 0 0;
+				padding: 25px 0;
+				background: #D33234;
+				color: #fff;
+				font-size: 14px;
+				line-height: 19px;
+				font-weight: 400;
+				text-align: center;
+				text-transform: uppercase;
+				letter-spacing: 0.03em;
+				transition: all 0.3s ease-in-out;
+			}
+		}
+
+		.breadcrumbs {
+			display: none;
+		}
+	}
+}
+
+
+
+@media(min-width: 1280px) {
+	.promo-inner {
+		min-height: 600px;
+
+		&__caption {
+			max-width: 600px;
+			margin:  20px 30px 0 30px;
+
+			.button {
+				display: none;
+			}
+		}
+
+		.breadcrumbs {
+			position: relative;
+			left: auto;
+			top: 10px;
+			display: block;
+		}
+	}
+}
+
+@media(min-width: 1919px) {
+	.promo-inner {
+
+		&__caption {
+			margin:  20px 30px 0 19%;
+		}
+
+		.breadcrumbs {
+			left: 19%;
+			width: 80%;
+			max-width: 1260px;
+			margin-left: 0;
+		}
+	}
+}
