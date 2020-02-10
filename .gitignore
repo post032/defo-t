@@ -1,13 +1,9 @@
 .idea
 *.log
-gulpfile.js
 node_modules/
 npm-debug.*
 Thumbs.db
 build/css/*.map
-package-lock.json
 .gitlab-ci.yml
-gulpfile.js
-package.json
 build/
 .DS_Store
